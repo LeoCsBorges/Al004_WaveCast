@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import url(header.css);
+@import url(main.css);
+@import url(footer.css);
+
+:root {
+    --azul-void: #01080E;
+    --azul-escuro: #041832;
+    --azul-medio: #144480;
+    --azul-neon: #2BDEFD;
+    --play-hover: #2EBED7;
+    --cinza-cards: rgba(196, 196, 196, 0.2);
+    --cinza: #C4C4C4;
+    --branco: #FFFFFF;
+    --gradiente: linear-gradient(60deg, #072041, #041833, #154580);
+}
+
+body {
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    color: var(--branco);
+    background-color: #dddddd;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    box-shadow: 4px 4px 12px 12px rgba(0, 0, 0, .15);
+}
+
+header  { grid-area: 1 / 1 / 4 / 2; }
+main    { grid-area: 1 / 2 / 3 / 3; }
+footer  { grid-area: 3 / 2 / 4 / 3; }
+
+@media screen and (max-width: 1024px) {
+    footer {
+        grid-area: 3 / 1 / 4 / 3; 
+    }
+}

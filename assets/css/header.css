@@ -1,0 +1,56 @@
+.menu {
+    background-color: var(--azul-void);
+    width: 228px;
+    padding-inline: .875rem;
+    padding-block: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.menu__logo {
+    display: block;
+}
+
+.menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu__nav__item {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu__nav__item:hover {
+    color: var(--play-hover);
+}
+
+.menu__nav__item:active {
+    color: var(--azul-neon);
+}
+
+.playlists {
+    flex-grow: 1;
+}
+
+.playlists__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        width: 208px;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .menu {
+        display: none;
+    }
+}
